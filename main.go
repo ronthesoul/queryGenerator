@@ -79,20 +79,20 @@ func readLine(in *bufio.Reader, prompt string) string {
 }
 
 // parseVendorsKeywords supports any of these formats in the .txt:
-// 1) Block format:
-//    vendors:
-//      Zoom, Slack, Okta
-//    keywords:
-//      hacked, breached, 0day, cve
+//  1. Block format:
+//     vendors:
+//     Zoom, Slack, Okta
+//     keywords:
+//     hacked, breached, 0day, cve
 //
-// 2) CSV lines (order-agnostic):
-//    vendors: Zoom, Slack, Okta
-//    keywords: hacked, breached, 0day, cve
+//  2. CSV lines (order-agnostic):
+//     vendors: Zoom, Slack, Okta
+//     keywords: hacked, breached, 0day, cve
 //
-// 3) Plain lists separated by a blank line (vendors first, keywords second):
-//    Zoom, Slack, Okta
+//  3. Plain lists separated by a blank line (vendors first, keywords second):
+//     Zoom, Slack, Okta
 //
-//    hacked, breached, 0day, cve
+//     hacked, breached, 0day, cve
 //
 // Lines starting with '#' are comments and ignored.
 func parseVendorsKeywords(path string) ([]string, []string, error) {
@@ -227,4 +227,3 @@ func normalizeList(items []string) []string {
 	}
 	return out
 }
-
