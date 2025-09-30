@@ -79,6 +79,7 @@ func readLine(in *bufio.Reader, prompt string) string {
 }
 
 // parseVendorsKeywords supports any of these formats in the .txt:
+//
 //  1. Block format:
 //     vendors:
 //     Zoom, Slack, Okta
