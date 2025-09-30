@@ -3,8 +3,12 @@ name: Lint, Build, Tag & Release
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - '**/*.go'
   pull_request:
     branches: [ "main" ]
+    paths:
+      - '**/*.go'
 
 permissions:
   contents: write   # needed for tagging & releases on push

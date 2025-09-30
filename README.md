@@ -35,7 +35,11 @@ from a simple text file of vendors and keywords. Output is saved to a
     chmod +x ./querygen-darwin-arm64
     mv ./querygen-darwin-arm64 /usr/local/bin/querygen
     ```
+4. Unquaratine it if you are using macOS:
+    ``` bash
+    xattr -d com.apple.quarantine /usr/local/bin/querygen  
 
+    ```
 ### Option B: Build from source
 
 ``` bash
